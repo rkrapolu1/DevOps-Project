@@ -1,0 +1,23 @@
+1..There many ways to deliver the code, But I have provided one of the best method to do it so.
+
+2.      Spin Up Cloud Formation Template Create a load balanced and Auto Scaled sample hello_world Code running on it. The application is Auto-Scaled based on the CPU utilization of the server. Notifications will be sent to the operator email address on scaling events. The instances are load balanced with a simple health check against the default web page.
+
+3.      Use User-data scripts in CFT to Open security groups and IAM roles to be managed.
+
+4.      Install and configure Jenkins and Docker with user data and initialize docker swarm.
+
+5.      Write a docker file to build an image from given source code.
+
+6.      Also install ansible and git from same docker file.
+
+7.      Write playbook test.yml to deploy the code from docker compose file deploy.yml which creates number of replicas mentioned for high availability and hosts file.
+
+8.      All the above scripts are stored in github.
+
+9.      Then Jenkins jobs to be started by pulling the code from git hub and run the test.yml playbook.
+
+10.  This will deliver the code to the container.
+
+11.  You will have access to the code by http://localhost:5000
+
+12.  I have attached all the above mentioned files which I have used to deliver.

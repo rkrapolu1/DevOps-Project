@@ -1,0 +1,25 @@
+ - name: copy and run the files
+
+  remote_user: ec2-user
+
+  sudo: yes
+
+  hosts: dockerswarm
+
+  vars:
+
+   ansible_ssh_private_key_file: "/home/ec2-user/Lab-2.pem"
+
+  tasks:
+
+   - name: remove crules stacks
+
+     command: docker stack rm test
+
+   - pause:
+
+      seconds: 20
+
+   - name: run files
+
+     command: docker stack deploy --compose-file /var/lib/jenkins/workspace/kumar/deploy.yml Test
